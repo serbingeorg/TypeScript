@@ -27,14 +27,32 @@ let array: [number, number, string] = [1, 2, '3'];
 
 let array2: [boolean, string, number] = [true, '3', 2]; */
 
-const myName: string = 'SERBIN YURII';
-const myAge: number = 37;
 
-function getMyName(): string {
-    return myName;
+//functions
+// const myName: string = 'SERBIN YURII';
+// const myAge: number = 37;
+
+// function getMyName(): string {
+//     return myName;
+// }
+// function getMyAge(age: number, prefix: string): string {
+//     return prefix + ' ' + age;
+// }
+// // console.log(getMyName());
+// console.log(getMyAge(37, 'Serbin Yurii'));
+
+/* function consolelog(str: string): void {
+    console.log(str);
 }
-function getMyAge(): number {
-    return myAge;
+consolelog('Test STRING'); */
+const testFunc = () => 1 + 1;
+const testFunc2 = function () {
+    return 1 + 1;
 }
-console.log(getMyName());
-console.log(getMyAge());
+
+let mySum: (a: number, b: number) => number;
+function sum(num1: number, num2: number): number {
+    return num1 + num2;
+}
+mySum = sum;
+console.log(mySum(50, 50));

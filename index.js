@@ -26,15 +26,28 @@ let boolArray2: Array<boolean> = [true, false];
 let array: [number, number, string] = [1, 2, '3'];
 
 let array2: [boolean, string, number] = [true, '3', 2]; */
-var myName = 'SERBIN YURII';
-var myAge = 37;
-
-function getMyName() {
-    return myName;
+//functions
+// const myName: string = 'SERBIN YURII';
+// const myAge: number = 37;
+// function getMyName(): string {
+//     return myName;
+// }
+// function getMyAge(age: number, prefix: string): string {
+//     return prefix + ' ' + age;
+// }
+// // console.log(getMyName());
+// console.log(getMyAge(37, 'Serbin Yurii'));
+/* function consolelog(str: string): void {
+    console.log(str);
 }
-
-function getMyAge() {
-    return myAge;
+consolelog('Test STRING'); */
+var testFunc = function () { return 1 + 1; };
+var testFunc2 = function () {
+    return 1 + 1;
+};
+var mySum;
+function sum(num1, num2) {
+    return num1 + num2;
 }
-console.log(getMyName());
-console.log(getMyAge());
+mySum = sum;
+console.log(mySum(50, 50));
