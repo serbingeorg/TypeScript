@@ -1,4 +1,4 @@
-//string
+/* //string
 let str: string = 'string!';
 
 //number
@@ -25,4 +25,16 @@ let boolArray2: Array<boolean> = [true, false];
 //tuples
 let array: [number, number, string] = [1, 2, '3'];
 
-let array2: [boolean, string, number] = [true, '3', 2];
+let array2: [boolean, string, number] = [true, '3', 2]; */
+
+const myName: string = 'SERBIN YURII';
+const myAge: number = 37;
+
+function getMyName(): string {
+    return myName;
+}
+function getMyAge(): number {
+    return myAge;
+}
+console.log(getMyName());
+console.log(getMyAge());

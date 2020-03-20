@@ -1,20 +1,40 @@
-//string
-var str = 'string!';
+/* //string
+let str: string = 'string!';
+
 //number
-var num = 10;
+let num: number = 10;
+
 //boolean
-var isTrue = true;
-var isFalse = false;
+let isTrue: boolean = true;
+let isFalse: boolean = false;
+
 //other
-var unknown = '1';
+let unknown: string | boolean = '1';
 unknown = true;
+
 //Array
-var numArray1 = [1, 2, 3];
-var numArray2 = [1, 2, 3];
-var strArray1 = ['1', '2', '3'];
-var strArray2 = ['1', '2', '3'];
-var boolArray1 = [true, false];
-var boolArray2 = [true, false];
+let numArray1: number[] = [1, 2, 3];
+let numArray2: Array<number> = [1, 2, 3];
+
+let strArray1: string[] = ['1', '2', '3'];
+let strArray2: Array<string> = ['1', '2', '3'];
+
+let boolArray1: boolean[] = [true, false];
+let boolArray2: Array<boolean> = [true, false];
+
 //tuples
-var array = [1, 2, '3'];
-var array2 = [true, '3', 2];
+let array: [number, number, string] = [1, 2, '3'];
+
+let array2: [boolean, string, number] = [true, '3', 2]; */
+var myName = 'SERBIN YURII';
+var myAge = 37;
+
+function getMyName() {
+    return myName;
+}
+
+function getMyAge() {
+    return myAge;
+}
+console.log(getMyName());
+console.log(getMyAge());
