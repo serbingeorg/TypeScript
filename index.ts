@@ -45,7 +45,7 @@ let array2: [boolean, string, number] = [true, '3', 2]; */
     console.log(str);
 }
 consolelog('Test STRING'); */
-const testFunc = () => 1 + 1;
+/* const testFunc = () => 1 + 1;
 const testFunc2 = function () {
     return 1 + 1;
 }
@@ -55,4 +55,29 @@ function sum(num1: number, num2: number): number {
     return num1 + num2;
 }
 mySum = sum;
-console.log(mySum(50, 50));
+console.log(mySum(100, 50)); */
+
+// objects
+
+type User = { name: string, age: number, getJobs: () => string[], logName?: () => void, jobs: string[] };
+
+let user: User = {
+    name: 'SERBIN YURII',
+    age: 37,
+    jobs: ['a', 'b'],
+    getJobs(): string[] {
+        return this.jobs;
+    },
+    logName(): void {
+        console.log(this.name)
+    }
+};
+
+let user2: User = {
+    name: 'Max',
+    age: 30,
+    jobs: ['2'],
+    getJobs(): string[] {
+        return this.jobs;
+    },
+}
