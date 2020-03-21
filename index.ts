@@ -59,7 +59,7 @@ console.log(mySum(100, 50)); */
 
 // objects
 
-type User = { name: string, age: number, getJobs: () => string[], logName?: () => void, jobs: string[] };
+/* type User = { name: string, age: number, getJobs: () => string[], logName?: () => void, jobs: string[] };
 
 let user: User = {
     name: 'SERBIN YURII',
@@ -80,4 +80,17 @@ let user2: User = {
     getJobs(): string[] {
         return this.jobs;
     },
+} */
+
+//compilator
+type User = { name: string, age: number };
+const user: User = {
+    name: 'Serbin Yurii',
+    age: 37
+};
+
+function logUser(user: User): void {
+    console.log(user.name + '' + user.age);
 }
+
+logUser(user);

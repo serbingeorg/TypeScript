@@ -27,21 +27,11 @@ let array: [number, number, string] = [1, 2, '3'];
 
 let array2: [boolean, string, number] = [true, '3', 2]; */
 var user = {
-    name: 'SERBIN YURII',
-    age: 37,
-    jobs: ['a', 'b'],
-    getJobs: function () {
-        return this.jobs;
-    },
-    logName: function () {
-        console.log(this.name);
-    }
+    name: 'Serbin Yurii',
+    age: 37
 };
-var user2 = {
-    name: 'Max',
-    age: 30,
-    jobs: ['2'],
-    getJobs: function () {
-        return this.jobs;
-    }
-};
+
+function logUser(user) {
+    console.log(user.name + ' ' + user.age);
+}
+logUser(user);
