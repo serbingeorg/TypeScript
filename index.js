@@ -30,8 +30,7 @@ var user = {
     name: 'Serbin Yurii',
     age: 37
 };
-
 function logUser(user) {
-    console.log(user.name + ' ' + user.age);
+    console.log(user.name + '' + user.age);
 }
 logUser(user);
