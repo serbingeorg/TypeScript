@@ -82,7 +82,7 @@ let user2: User = {
     },
 } */
 
-//compilator
+/* //compilator
 type User = { name: string, age: number };
 const user: User = {
     name: 'Serbin Yurii',
@@ -93,4 +93,103 @@ function logUser(user: User): void {
     console.log(user.name + '' + user.age);
 }
 
-logUser(user);
+logUser(user); */
+
+/* //special types
+enum Job {
+    frontend,
+    backend = 50,
+    designer
+}
+
+const job: Job = Job.backend;
+console.log(job);
+
+function throwNewError(err: string): never {
+    throw new Error(err);
+}
+
+let newVar;
+newVar = null;
+
+let myNumber: number | null = 20;
+myNumber = null; */
+
+/* //classes
+class User {
+    //name: string; //public
+    private isTeacher: boolean;
+    protected age: number = 30;
+    // public job: string;
+
+    constructor(public name: string, public job: string) {
+        //this.name = name;
+        //this.job = job;
+    }
+
+    getAge(): number {
+        return this.age;
+    }
+
+    public setTitle(title: boolean) {
+        this.isTeacher = title;
+        console.log(this.isTeacher);
+    }
+
+}
+
+const user = new User('Serbin', 'Backend');
+console.log(user);
+console.log(user.getAge());
+user.setTitle(false); */
+
+//inheritance classes
+class User {
+
+    private isTeacher: boolean;
+    protected age: number = 30;
+
+
+    constructor(public name: string, public job: string) {
+
+    }
+
+    public getAge(): string {
+        return this.age + '';
+    }
+}
+
+class WFM extends User {
+    constructor(job: string) {
+        super('Yurii', job);
+        this.age = 37;
+    }
+    getAge(): string {
+        return 'Hello ' + this.age;
+    }
+}
+
+const user = new User('Serbin', 'Backend');
+const wfm = new WFM('Backend');
+//console.log(wfm.getAge());
+
+abstract class Car {
+    model: string;
+    year: number = 2010;
+
+    abstract logINFO(info: string): void;
+
+    getYearCar(): number {
+        return this.year;
+    }
+}
+
+class Mercedes extends Car {
+    logINFO(info: string): void {
+        console.log(info);
+    }
+}
+const car = new Mercedes();
+console.log(car);
+car.logINFO('info');
+console.log(car.getYearCar());
